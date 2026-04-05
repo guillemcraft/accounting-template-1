@@ -5,7 +5,7 @@ export default function HomePage() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-primary to-primary-container pt-28 pb-16">
+      <section className="relative min-h-[921px] flex items-center overflow-hidden bg-gradient-to-br from-primary to-primary-container pt-28 pb-16">
         {/* Growth Ornament - Animated */}
         <div className="absolute inset-0 pointer-events-none">
           <div className="absolute top-1/2 left-1/2 border border-outline-variant rounded-full w-[800px] h-[800px] hero-circle-1" />
@@ -60,11 +60,11 @@ export default function HomePage() {
         <div className="relative w-full overflow-hidden opacity-40 hover:opacity-60 transition-opacity duration-500">
           <div className="ticker-track flex w-max gap-20 items-center">
             {[...Array(2)].map((_, setIndex) =>
-              ["Lumina", "Vanguard", "Stratosphere", "Apex", "Foundry", "Meridian", "Pinnacle", "Horizon"].map(
+              ["Lumina", "Vanguard", "Stratosphere", "Apex", "Foundry", "Meridian"].map(
                 (name) => (
                   <span
                     key={`${setIndex}-${name}`}
-                    className="text-primary font-headline text-3xl italic font-bold whitespace-nowrap px-4"
+                    className="text-primary font-headline text-2xl italic font-bold whitespace-nowrap px-4"
                   >
                     {name}
                   </span>
