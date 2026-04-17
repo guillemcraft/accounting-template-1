@@ -53,9 +53,9 @@
   --color-on-error: #ffffff;
   --color-on-error-container: #93000a;
 
-  --font-headline: "Newsreader", serif;
-  --font-body: "Manrope", sans-serif;
-  --font-label: "Manrope", sans-serif;
+  --font-headline: "Fraunces", "Albra", Georgia, serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
 }
 
 .material-symbols-outlined {
