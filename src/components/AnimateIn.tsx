@@ -18,16 +18,32 @@ export function AnimateIn({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  // Start visible so the server-rendered HTML (and the pre-hydration paint)
+  // shows the content immediately. The entrance animation is a progressive
+  // enhancement applied after mount — never a precondition for being seen.
+  // This prevents the "black screen until JS loads" problem on slow devices.
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
+    // Respect users who prefer reduced motion: keep everything visible, skip
+    // the entrance animation entirely.
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    // The observer drives visibility entirely. Its first callback fires after
+    // the initial paint, so content the user can already see (the hero) reports
+    // "intersecting" and simply stays visible — no flash. Anything below the
+    // fold reports "not intersecting", gets hidden (off-screen, so unseen), and
+    // then animates in once it scrolls into view.
     const observer = new IntersectionObserver(
       ([entry]) => {
+        setVisible(entry.isIntersecting);
         if (entry.isIntersecting) {
-          setVisible(true);
           observer.unobserve(el);
         }
       },
