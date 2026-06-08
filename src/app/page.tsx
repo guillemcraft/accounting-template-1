@@ -36,8 +36,7 @@ export default function HomePage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjzYd7VduJ5zdyMonTcwb1KyxaG-wP68C7tcl-0uctqBLxjoeoCE7nhTJwWjWIUxIrj43DTKwHm5gYRbkodrSnzPPC35DfzI8O-Bov5gt-V8nlWvCEza8E6w-UJJDzS-K5S_mDUlacR0seMdSiaDnGHvi8uyLwrD-YvKvRSO1qB6P-gcVW0Gngyb9_p7hFq2Rrt-Lf5mYb5r87Q9aVWJ7lLhA1oXx2HRie-XpiV7cT2I2zN3PTQib03_B4PQ9qBMFtQu4JuL63zX4"
                   width={600}
                   height={750}
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  sizes="50vw"
                   className="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]"
                 />
               </div>

@@ -46,7 +46,7 @@ export default function CompanyPage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgfWMzcuse4nQZXAHj-Tbh7Imk7KGI5WhtIU1XlJKZA19xNMTOti865xeBu5PBXZXCP4UEg1MKirgacuH6U10ygMzl9G3-3_TqWv4C-lCzrTebqlCZDLgdHN4QKuiOpAjhGm1Bk2HNjdH81a59ufoWqqxIXTntqCTQ_ubwqSVXh21UaVrWCD-cuLes3P98ay_kuxB1XwJ46TEAS2L1rwO7JiZ72FoyEec8XMm_y8URTG28R_tzyI98Xueqm9QqbbEdJIxGWT6iObQ"
                   width={600}
                   height={750}
-                  priority
+                  preload
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                 />

@@ -9,6 +9,14 @@ export function CursorFollower() {
     const dot = dotRef.current;
     if (!dot) return;
 
+    // The dot is hidden on touch / small screens (`hidden md:block`), so don't
+    // run the mousemove listener or the perpetual rAF loop there — it only
+    // burns CPU and battery on mobile during the critical load window.
+    const isPointerDevice = window.matchMedia(
+      "(hover: hover) and (pointer: fine)"
+    ).matches;
+    if (!isPointerDevice) return;
+
     let mouseX = 0;
     let mouseY = 0;
     let dotX = 0;

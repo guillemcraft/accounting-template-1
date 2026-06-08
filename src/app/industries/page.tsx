@@ -42,7 +42,7 @@ export default function IndustriesPage() {
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfqKPuK1PSeQiyc8-oGRQoJOwqxMQahWdqaHbGTTmYR7pT-ohL1Jt9SfMZw55BnpPVGR4mDOHyvUYljy1r_HFaDI_c_Xp8JJ4dSZMWJ-SSAOIH03jagFu2JCZZY8vlmIw4u-UBsAGGqi-_WxouNiN2nlOZN55TgnEdtnU-gYzaNK78SX10M3zSmmmQXKSn_GPenfv4OlsBa_o7BXPMcCz-DrwXQMhuz1IcQHFqNtur4Wv6RIFlHxI7nhbE93XxanBOE3QRO8mKkyE"
                   width={600}
                   height={750}
-                  priority
+                  preload
                   sizes="(max-width: 768px) 100vw, 40vw"
                   className="w-full h-full object-cover rounded shadow-2xl"
                 />
